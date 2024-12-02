@@ -1,0 +1,130 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+  }
+  
+  h1, h2 {
+    margin-bottom: 1rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Header */
+  .main-header {
+    background: linear-gradient(120deg, #6c63ff, #482fff);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .main-header .logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  
+  .main-header .tagline {
+    margin-top: 0.5rem;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  
+  /* Container de Cards */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Card */
+  .card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #482fff;
+  }
+  
+  .card-description {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #482fff;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+  
+  .card-button:hover {
+    background: #6c63ff;
+  }
+
+
+  /* Hover nos cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card.hovered {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Cabeçalho com scroll suave */
+  .main-header {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(135deg, #6c63ff, #482fff);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+  
+  .main-header.hide {
+    transform: translateY(-100%);
+  }
+  
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
