@@ -27,18 +27,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardContainer = document.querySelector('.card-container');
     const newCards = [
         {
-            title: 'Human Resource Machine',
-            description: 'Um jogo de lógica onde você usa conceitos de programação para resolver puzzles.',
-            image: 'humanresourcemachine.jpg',
-            link: 'https://tomorrowcorporation.com/human-resource-machine',
-          },
+            title: 'CSS Battle',
+            description: 'Desafios de codificação onde você usa CSS para criar imagens incríveis e resolver puzzles.',
+            image: 'jogos/cssbattle.png',  // Coloque o nome correto da imagem
+            link: 'https://cssbattle.dev',  // Link para o jogo
+          },          
                    
       {
         title: 'CSS Diner',
         description: 'Pratique seletores CSS enquanto se diverte.',
         image: 'jogos/cssdiner.jpg',
         link: 'https://flukeout.github.io/',
-      },
+      }
       // Adicione mais objetos de jogos conforme necessário
     ];
   

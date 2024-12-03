@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+  html{
+    scroll-behavior: smooth;
+  }
   
   body {
     font-family: 'Poppins', sans-serif;
@@ -48,11 +52,20 @@
     align-items: center;
     gap: 1rem;
   }
+
+  /* Tornando a área da logo clicável */
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove o sublinhado padrão da tag <a> */
+    color: inherit; /* Garante que a cor do texto e imagem seja a mesma */
+}
   
   .logo-image {
     width: var(--logo-size);
     height: var(--logo-size);
     object-fit: cover;
+    margin-right: 1rem; /* Adicionando espaçamento entre a logo e o título */
   }
   
   .logo {
@@ -77,17 +90,9 @@
     }
   
     .tagline {
-      margin-left: 0;
-      margin-top: 0.5rem;
-    }
+        display: none;
+      }
   }
-
-  @media (max-width: 768px) {
-    .tagline {
-      display: none;
-    }
-  }
-  
   
   /* Cards Container */
   .card-container {
@@ -122,6 +127,7 @@
   .card-image {
     width: 100%;
     height: 150px;
+    border-radius: 4px;
     object-fit: cover;
     margin-bottom: 1rem;
   }
@@ -218,6 +224,31 @@
   .responsive-text {
     display: none;
   }
+
+/* Estilização do Título Jogos */
+.games-title {
+    font-size: 2rem; /* Tamanho do texto sutil e moderno */
+    font-weight: 600; /* Peso da fonte mais suave, mas ainda em destaque */
+    color: #3d429b; /* Cor discreta e elegante */
+    text-align: left; /* Alinhado à esquerda, mas não exagerado */
+    margin: 2rem 2rem 1rem 2rem; /* Maior margem superior (2rem) para mais espaço no topo, margem inferior 1rem */
+    padding-left: 22rem; /* Espaço suave à esquerda, mais próximo aos cards */
+    text-transform: uppercase; /* Maiúsculas para dar um toque de autoridade */
+    letter-spacing: 1px; /* Espaçamento levemente aumentado para uma aparência clean */
+    width: auto; /* Largura ajustada conforme o conteúdo */
+}
+
+/* Estilização Responsiva para o Título Jogos */
+@media (max-width: 768px) {
+    .games-title {
+        font-size: 1.6rem; /* Ajuste para telas menores */
+        text-align: center;
+        padding-left: 1.5rem; /* Menos espaço à esquerda em dispositivos menores */
+        letter-spacing: 0.8px; /* Ajuste no espaçamento para telas pequenas */
+        margin: 2rem 0 1rem 0; /* Aumenta a margem superior e mantém a inferior mais compacta */
+    }
+}
+  
   
 /* Parágrafo Responsivo no Corpo - Exclusivo para Telas Pequenas */
 @media (max-width: 768px) {
