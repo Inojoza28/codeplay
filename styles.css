@@ -228,11 +228,10 @@
 /* Estilização do Título Jogos */
 .games-title {
     font-size: 2rem; /* Tamanho do texto sutil e moderno */
+    text-align: center;
     font-weight: 600; /* Peso da fonte mais suave, mas ainda em destaque */
     color: #3d429b; /* Cor discreta e elegante */
-    text-align: left; /* Alinhado à esquerda, mas não exagerado */
     margin: 2rem 2rem 1rem 2rem; /* Maior margem superior (2rem) para mais espaço no topo, margem inferior 1rem */
-    padding-left: 22rem; /* Espaço suave à esquerda, mais próximo aos cards */
     text-transform: uppercase; /* Maiúsculas para dar um toque de autoridade */
     letter-spacing: 1px; /* Espaçamento levemente aumentado para uma aparência clean */
     width: auto; /* Largura ajustada conforme o conteúdo */
