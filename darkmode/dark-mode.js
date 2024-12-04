@@ -1,20 +1,34 @@
 // Seleciona o header principal
 const header = document.querySelector('.main-header');
 
-// Variável para acompanhar a posição anterior de rolagem
+// Variáveis para acompanhar a posição anterior de rolagem e o estado atual do header
 let lastScrollY = window.scrollY;
+let isShrunk = false;
 
 // Adiciona o evento de rolagem
 window.addEventListener('scroll', () => {
-  // Verifica a direção da rolagem
-  if (window.scrollY > 50 && window.scrollY > lastScrollY) {
-    header.classList.add('shrink'); // Encolhe o header ao rolar para baixo
-  } else if (window.scrollY < lastScrollY) {
-    header.classList.remove('shrink'); // Restaura o tamanho ao rolar para cima
+  const currentScrollY = window.scrollY;
+
+  // Verifica se está no topo da página
+  if (currentScrollY === 0) {
+    header.classList.remove('shrink'); // Restaura o header ao tamanho completo
+    isShrunk = false; // Atualiza o estado
+  }
+
+  // Verifica se rolou para baixo e se o header ainda não está encolhido
+  else if (currentScrollY > 50 && currentScrollY > lastScrollY && !isShrunk) {
+    header.classList.add('shrink'); // Encolhe o header
+    isShrunk = true; // Atualiza o estado
+  }
+
+  // Verifica se rolou para cima com uma rolagem mínima e o header está encolhido
+  else if (currentScrollY < lastScrollY - 20 && isShrunk) {
+    header.classList.remove('shrink'); // Restaura o header
+    isShrunk = false; // Atualiza o estado
   }
 
   // Atualiza a posição anterior de rolagem
-  lastScrollY = window.scrollY;
+  lastScrollY = currentScrollY;
 });
 
 

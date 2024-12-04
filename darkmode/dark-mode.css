@@ -140,9 +140,8 @@
     }
 
     .main-header.shrink .logo-image {
-      height: 50px; /* Tamanho reduzido */
+      height: 40px; /* Tamanho reduzido */
     }
-    
     
     .main-header .tagline,
     .main-header .btn-container {
@@ -155,6 +154,19 @@
       opacity: 0;
       pointer-events: none; /* Remove a interação quando escondido */
     }
+
+    .main-header {
+      transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); /* Suaviza a transição */
+    }
+    
+    .logo-image {
+      transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); /* Suaviza a transição da logo */
+    }
+    
+    .main-header.shrink .logo-image {
+      transform: scale(0.8); /* Reduz o tamanho da logo */
+    }
+    
   }
   
 /* Estilo do modo dark */
