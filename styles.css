@@ -93,6 +93,15 @@
         display: none;
       }
   }
+
+  @media (max-width: 480px) {
+    .logo-image{
+      margin-top: 20px;
+    }
+    .logo{
+      margin-top: 20px;
+    }
+  }
   
   /* Cards Container */
   .card-container {
@@ -274,4 +283,3 @@
       transform: translateY(0); /* Remove o deslocamento vertical */
     }
   }
-  
