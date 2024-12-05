@@ -26,22 +26,38 @@ document.addEventListener('DOMContentLoaded', () => {
     // Carregamento Dinâmico de Cards (Exemplo)
     const cardContainer = document.querySelector('.card-container');
     const newCards = [
-        {
-            title: 'CSS Battle',
-            description: 'Desafios de codificação onde você usa CSS para criar imagens incríveis e resolver puzzles.',
-            image: 'jogos/cssbattle.png',  // Coloque o nome correto da imagem
-            link: 'https://cssbattle.dev',  // Link para o jogo
-          },          
-                   
       {
-        title: 'CSS Diner',
-        description: 'Pratique seletores CSS enquanto se diverte.',
-        image: 'jogos/cssdiner.jpg',
-        link: 'https://flukeout.github.io/',
+          title: 'CSS Battle',
+          description: 'Desafios de codificação onde você usa CSS para criar imagens incríveis e resolver puzzles.',
+          image: 'jogos/cssbattle.png',
+          link: 'https://cssbattle.dev',
+      },
+      {
+          title: 'CSS Diner',
+          description: 'Pratique seletores CSS enquanto se diverte.',
+          image: 'jogos/cssdiner.jpg',
+          link: 'https://flukeout.github.io/',
+      },
+      {
+          title: 'SQL Murder Mystery',
+          description: 'Resolva um mistério usando suas habilidades em SQL.',
+          image: 'jogos/sqlmurdermystery.png', // Coloque o caminho correto para a imagem
+          link: 'https://mystery.knightlab.com/',
+      },
+      {
+          title: 'Screeps',
+          description: 'Um MMO de programação onde você controla unidades usando JavaScript.',
+          image: 'jogos/screeps.png', // Coloque o caminho correto para a imagem
+          link: 'https://screeps.com/',
+      },
+      {
+          title: 'Cargo Bot',
+          description: 'Um jogo de puzzles onde você programa robôs para organizar caixas.',
+          image: 'jogos/cargobot.jpg', // Coloque o caminho correto para a imagem
+          link: 'https://i4ds.github.io/CargoBot/?state=1',
       }
-      // Adicione mais objetos de jogos conforme necessário
-    ];
-  
+  ];
+    
     // Função para criar e adicionar novos cards
     newCards.forEach((card) => {
       const cardElement = document.createElement('div');
